@@ -1,3 +1,33 @@
+:root {
+    --main-bg-color: #024561;
+}
+
+
+.d-flex {
+    background-color: #024561;
+}
+
+.navbar{
+    background-color: #021F31;
+}
+
+.flex-shrink{
+    background-color: #024561;
+}
+
+.footer{
+    background-color: #021F31;
+}
+
+.container{
+    background-color: #024561;
+}
+
+.button{
+    background-color: #1cd4c8;
+
+}
+
 main>.container {
     padding: 60px 15px 0;
 }
