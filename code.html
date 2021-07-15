@@ -23,7 +23,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-secondary">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -38,10 +38,10 @@
                         <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/app.html">The App</a>
+                        <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
+                        <a class="nav-link" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about.html">About Me</a>
@@ -52,30 +52,68 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
-            <h1 class="mt-5">Template with dark fixed navbar and sticky footer</h1>
-            <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
-                CSS. A fixed navbar has been added with padding-top: 60px; on the main > .container.</p>
+        <div class="container col-5 mt-5">
+            <div class="row">
+                <div class="col">
+                </div>
+            </div>
+            <div class="container col shadow-lg p-3 mb-5 bg-dark rounded">
+                <div class="row">
+                    <div class="col">
+                        <h2 id="tacocat-title" class="text-center text text-light">Palindrome</h2>
+                        <h2 id="tacocat-title" class="text-center text-light">Challenge</h2>
+                        <h2 id="tacocat-title" class="text-center text-light">TacocaT</h2>
+                        <img src="https://media.giphy.com/media/i3Ks1lAev1wk/giphy.gif"
+                            class="img-fluid rounded mx-auto d-block" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-light">
+                        <p>
+                            Example: if you enter Racecar, the answer is racecaR</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
 
+                        <form>
+                            <div class="form-group">
 
-        </div>
+                                <input type="text" id="tacoCat" class="form-control text-center"
+                                    placeholder="Enter 2 or more Characters"></input>
+                                <button type="button" id="submitBtn" class="form-control btn btn-info mt-2">Reverse!
+                                    Reverse!</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row text-light">
+                    <div class="col container-fluid">
+                        <h4>Your answer is: <u><span class="text-light" id="output"></span></u></h4>
+                    </div>
+                    <div class="col">
+                        <h4 id="output"></h4>
+                    </div>
+                </div>
+            </div>
     </main>
 
 
+
     <footer class="footer mt-auto py-3 bg-dark">
-        <div class="container-fluid text-center text-danger">
+        <div class="container-fluid text-center text-muted">
             <div class="row">
                 <div class="col">
-                    &copy2021 <span class="text-primary">A. Russell | Demo Code</span>
+                    &copy2021 <span>A. Santiago | A broken person</span>
                 </div>
                 <div class="col">
-                    <span class="text-light text-uppercase"> andrew russell</span>
+                    <span class="text-light text-uppercase"> Abdiel Santiago</span>
                 </div>
                 <div class="col">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x text-danger"></i></a>
-                    <a href="#" class="text-danger" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x text-muted"></i></a>
+                    <a href="#" class="text-muted" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-muted"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube fa-2x text-muted"></i></a>
                 </div>
             </div>
         </div>
@@ -92,9 +130,9 @@
     <script src="/js/prism.js"></script>
     <script src="/js/site.js"></script>
 
-
-    <!-- <script src="/js/all.min.js"></script>-->
-
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", getWord)
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
